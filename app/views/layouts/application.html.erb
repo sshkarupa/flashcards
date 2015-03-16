@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Flashcards</title>
+  <title>Флэшкарточкер</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
+<div class="container">
+    <div class="header">
+      <nav>
+      <ul class="nav nav-pills pull-right">
+         <li role="presentation"><%= link_to "Все карточки",    '#' %></li>
+        <li role="presentation"><%= link_to "Добавить карточку",    '#' %></li>
+      </ul>
+      </nav>
+      <h3 class="text-muted">Флэшкарточкер</h3>
+    </div>
 
-<%= yield %>
-
+    <!-- Begin page content -->
+        <div class="container">
+           <%= yield %>
+        </div>
+</div>
 </body>
 </html>
