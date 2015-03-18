@@ -5,24 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= render 'layouts/shim' %>
+  <%= render 'shared/shim' %>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <nav>
-      <ul class="nav nav-pills pull-right">
-         <li role="presentation"><%= link_to "Все карточки", cards_path %></li>
-        <li role="presentation"><%= link_to "Добавить карточку", '#' %></li>
-      </ul>
-    </nav>
-      <h3><%= link_to "Флэшкарточкер", root_path, class: "logo" %></h3>
+    <%= render 'shared/nav' %>
+    <h3><%= link_to "Флэшкарточкер", root_path, class: "logo" %></h3>
   </div>
-<!-- Begin page content -->
-  <div class="container">
-    <%= yield %>
-  </div>  
+
+<!-- Begin content -->
+  <%= yield %>
+<!-- End content -->
+
 </div>
- <%= render 'layouts/footer' %>
+ <%= render 'shared/footer' %>
 </body>
 </html>
