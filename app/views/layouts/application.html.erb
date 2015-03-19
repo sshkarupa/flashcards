@@ -8,17 +8,15 @@
   <%= render 'shared/shim' %>
 </head>
 <body>
-<div class="container">
-  <div class="header">
-    <%= render 'shared/nav' %>
-    <h3><%= link_to "Флэшкарточкер", root_path, class: "logo" %></h3>
+  <div class="page">
+    <div class="container wrap">
+      <div class="header">
+        <%= render 'shared/nav' %>
+        <h3><%= link_to "Флэшкарточкер", root_path, class: "logo" %></h3>
+      </div>
+      <%= yield %>
+    </div>
+   <!-- <%= render 'shared/footer' %> -->
   </div>
-
-<!-- Begin content -->
-  <%= yield %>
-<!-- End content -->
-
-</div>
- <%= render 'shared/footer' %>
 </body>
 </html>
