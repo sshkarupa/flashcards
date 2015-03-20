@@ -7,6 +7,7 @@ class Card < ActiveRecord::Base
   end
 
   private
+
     def original_text_is_different_from_translated
       if original_text.mb_chars.downcase == translated_text.mb_chars.downcase
         errors[:base] << "оригинал и перевод не могут совпадать"
