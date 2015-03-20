@@ -4,14 +4,14 @@
   <% end -%>
   <div class="card__body">
     <%= simple_form_for @card do |f| %>
-    <%= f.input :original_text, as: :text, label: "Оригинал" %>
-    <%= f.input :translated_text, as: :text, label: "Перевод" %>
-    <%= f.button :submit, "Сохранить", class: btn %>
-    <% if @card.errors.any? %>
-      <span class="warning">
-        <strong>Ошибка!</strong> Проверьте правильность заполнения полей.
-      </span>
-    <% end %>
+      <%= f.input :original_text, as: :text, label: "Оригинал" %>
+      <%= f.input :translated_text, as: :text, label: "Перевод" %>
+      <%= f.button :submit, "Сохранить", class: btn %>
+      <% if @card.errors.any? %>
+        <span class="warning">
+          <strong>Ошибка!</strong> Проверьте правильность заполнения полей.
+        </span>
+      <% end %>
     <% end %>
   </div>
 <% end -%>
