@@ -35,7 +35,7 @@ class CardsController < ApplicationController
     redirect_to cards_path
   end
 
-private
+  private
 
   def find_card
     @card = Card.find(params[:id])
