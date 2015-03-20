@@ -16,7 +16,7 @@ class CardsController < ApplicationController
     if @card.save
       redirect_to cards_path
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -24,7 +24,7 @@ class CardsController < ApplicationController
     if @card.update(card_params)
       redirect_to cards_path
     else
-      render 'edit'
+      render "edit"
     end
   end
 

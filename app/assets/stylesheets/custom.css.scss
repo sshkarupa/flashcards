@@ -1,6 +1,6 @@
 // variables
-$red: #ff0000;
-$black: #000000;
+$warning: #ff0000;
+$logo: #000000;
 $white: #ffffff;
 $grey: #e5e5e5;
 $blue: #5bc0de;
@@ -10,10 +10,10 @@ $dark-blue: #337ab7;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
-  color: $black;
+  color: $logo;
   font-family: Open Sans, Arial;
   &:hover {
-    color: $black;
+    color: $logo;
     text-decoration: none;
   }
 }
@@ -39,25 +39,12 @@ body {
   }
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: $grey;
-  p {
-    margin: 20px 0;
-    text-align: right;
-    font-size: 0.8em;
-  }
-}
-
 .smfont {
   font-size: 0.9em;
 }
 
 .warning {
-  color: $red;
+  color: $warning;
   padding-left: 30px;
 }
 

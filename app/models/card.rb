@@ -2,9 +2,9 @@ class Card < ActiveRecord::Base
   before_validation :set_review_date
 
   validates :original_text, :translated_text, :review_date, presence: true
-  validate :the_same_text
+  validate :original_text_is_different_from_translated
 
-  def the_same_text
+  def original_text_is_different_from_translated
     if original_text.mb_chars.downcase == translated_text.mb_chars.downcase
        errors[:base] << "оригинал и перевод не могут совпадать"
     end
